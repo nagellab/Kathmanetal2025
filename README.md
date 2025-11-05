@@ -1,5 +1,5 @@
 Neural dynamics for working memory and evidence integration during olfactory navigation in Drosophila
-Code and simulation materials for Kathman et al., 2025 (Nature Communications submission)
+Code and simulation materials for Kathman et al., 2025 (bioRxv)
 
 --------------------------------------------------------------------
 OVERVIEW
@@ -10,7 +10,7 @@ behavioral states (baseline, goal-directed, and search), incorporating adaptive
 odor thresholds and probabilistic state transitions.
 
 The code replicates example simulations described in the manuscript:
-Kathman, N. (2025). "Neural dynamics for working memory and evidence integration
+Kathman, N., Lanz, A., Freed, J., Nagel, K. (2025). "Neural dynamics for working memory and evidence integration
 during olfactory navigation in Drosophila." Nature Communications (in review).
 
 --------------------------------------------------------------------
@@ -19,7 +19,7 @@ CONTENTS
 File / Folder                Description
 --------------------------------------------------------------------
 run_nav_simulation.m          MATLAB function to run a navigation simulation
-LICENSE.txt                   Open-source license (MIT)
+LICENSE.txt                   Open-source license (GNU)
 README.txt                    This documentation file
 
 --------------------------------------------------------------------
