@@ -1,0 +1,77 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat0\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww20080\viewh23820\viewkind0
+\deftab720
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 README: Analysis code\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 This folder contains MATLAB code used to generate the figure panels associated with the manuscript:\
+Neural dynamics for working memory and evidence integration during olfactory navigation in Drosophila\
+The code is organized around figure-panel plotting scripts and shared utility functions.\
+\pard\pardeftab720\sa298\partightenfactor0
+\cf0 Organization\
+\pard\pardeftab720\sa280\partightenfactor0
+\cf0 Figure-panel scripts\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Most .m files in the main code folder are named according to the figure or figure panel they generate. These scripts load previously processed behavioral and imaging data, perform the final analyses required for the figure panel, and plot the corresponding data. Data structs are called by a unique identifier (usually from a variable called use_flies) that references the cell of data structure names, allflies_filenames.m. This file is included in the shared data.\
+The figure-panel scripts are intended to document the analyses used to generate the manuscript figures. They may require local file paths to be updated before running on another computer.\
+\pard\pardeftab720\sa280\partightenfactor0
+\cf0 Utility folder\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 The utility folder contains shared MATLAB functions used by the figure-panel scripts. These functions perform tasks such as:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls1\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 importing raw or intermediate data files;\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 processing behavioral and imaging data;\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 synchronizing behavioral and imaging data;\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 calculating trial-level behavioral metrics;\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 identifying bump periods or bump onset/offset times;\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 plotting single-trial trajectories;\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 plotting trajectories colored by bump amplitude or other neural metrics;\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 plotting heatmaps and time-series summaries of behavior and bump activity across trials.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Examples of utility functions include functions for detecting bump periods, such as bumpfinder2, and general plotting function plot_a_trial, for single-trial behavioral and neural activity data.\
+\pard\pardeftab720\sa298\partightenfactor0
+\cf0 Data inputs\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 The scripts generally assume that processed MATLAB data structures have already been generated. These data structures contain synchronized behavioral and imaging variables, including fields such as bump amplitude, bump position, behavior timestamps, heading, velocity, odor stimulus timing, wind stimulus timing, and trial metadata.\
+The code does not necessarily include all raw data import steps required to regenerate these synchronized structures from raw acquisition files. Utility scripts are included for key processing steps, but some file paths and local directory structures may need to be modified.\
+\pard\pardeftab720\sa298\partightenfactor0
+\cf0 Running the scripts\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 To run a figure-panel script:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Open the relevant .m file in MATLAB.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Update the local headpath, subpath, or other file path variables if needed.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Confirm that the required processed data files are available.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Run the script from the top.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Some scripts contain commented alternative settings for different fly lines, figure panels, or exploratory versions of the analysis. The active settings at the top of each script indicate the figure or condition currently being generated.\
+\pard\pardeftab720\sa298\partightenfactor0
+\cf0 Output\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 Most scripts generate MATLAB figures. Some scripts also export figure files or CSV source data files when export flags are enabled or when source-data export blocks are included.\
+\pard\pardeftab720\sa298\partightenfactor0
+\cf0 Notes\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 These scripts were written as analysis and figure-generation code for the manuscript rather than as a general-purpose software package. The code is provided to document the analyses and allow figure panels to be regenerated from the processed data with appropriate local path adjustments.\
+Utility functions are shared across multiple scripts, so figure-panel scripts may depend on functions located in the utility folder.\
+}
